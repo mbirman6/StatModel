@@ -1,0 +1,1057 @@
+Last login: Wed Oct 28 16:18:04 on ttys001
+hello
+pb-d-128-141-185-199:~ JackOboB$ cdRootStuff 
+/Users/JackOboB/Scolaire/weizmann/Master/RootStuff/HistFac
+pb-d-128-141-185-199:HistFac JackOboB$ root -l main_2bin.cc 
+root [0] 
+Processing main_2bin.cc...
+
+RooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+Getting histogram.  InputFile data/2bin.root HistoPath  HistoName n1
+Opened input file: data/2bin.root: 0x7ffe746617a0
+Collecting Nominal Histogram
+Getting histogram.  InputFile data/2bin.root HistoPath  HistoName b
+Opened input file: data/2bin.root: 0x7ffe746622c0
+Getting histogram.  InputFile data/2bin.root HistoPath  HistoName m1
+Opened input file: data/2bin.root: 0x7ffe74663900
+Collecting Nominal Histogram
+Getting histogram.  InputFile data/2bin.root HistoPath  HistoName s1
+Opened input file: data/2bin.root: 0x7ffe74664c10
+Collecting Nominal Histogram
+Getting histogram.  InputFile data/2bin.root HistoPath  HistoName b
+Opened input file: data/2bin.root: 0x7ffe74665cf0
+Getting histogram.  InputFile data/2bin.root HistoPath  HistoName n2
+Opened input file: data/2bin.root: 0x7ffe74666de0
+Collecting Nominal Histogram
+Getting histogram.  InputFile data/2bin.root HistoPath  HistoName b
+Opened input file: data/2bin.root: 0x7ffe74667ea0
+Getting histogram.  InputFile data/2bin.root HistoPath  HistoName m2
+Opened input file: data/2bin.root: 0x7ffe745eed90
+Collecting Nominal Histogram
+Getting histogram.  InputFile data/2bin.root HistoPath  HistoName s2
+Opened input file: data/2bin.root: 0x7ffe74668f80
+Collecting Nominal Histogram
+Getting histogram.  InputFile data/2bin.root HistoPath  HistoName b
+Opened input file: data/2bin.root: 0x7ffe745f31f0
+Measurement Name: meas	 OutputFilePrefix: results/StatModel	 POI: MU	 Lumi: 1	 LumiRelErr: 0.1	 BinLow: 0	 BinHigh: 1	 ExportOnly: 1
+Constant Params:  Lumi
+Channels:
+	 Channel Name: chan1	 InputFile: 
+	 Data:
+	 	 InputFile: data/2bin.root	 HistoName: n1	 HistoPath: 	 HistoAddress: 0x7ffe746630c0
+	 statErrorConfig:
+	 	 RelErrorThreshold: 0.05	 ConstraintType: Gaussian
+	 Samples: 
+	 	 Name: b	 	 Channel: chan1	 NormalizeByTheory: False	 StatErrorActivate: False
+	 	 	 	 	 InputFile: data/2bin.root	 HistName: b	 HistoPath: 	 HistoAddress: 0x7ffe74664840
+	 End of Channel chan1
+	 Channel Name: chan2	 InputFile: 
+	 Data:
+	 	 InputFile: data/2bin.root	 HistoName: m1	 HistoPath: 	 HistoAddress: 0x7ffe74665920
+	 statErrorConfig:
+	 	 RelErrorThreshold: 0.05	 ConstraintType: Gaussian
+	 Samples: 
+	 	 Name: s1	 	 Channel: chan2	 NormalizeByTheory: False	 StatErrorActivate: False
+	 	 	 	 	 InputFile: data/2bin.root	 HistName: s1	 HistoPath: 	 HistoAddress: 0x7ffe74666a10
+	 	 Name: b	 	 Channel: chan2	 NormalizeByTheory: False	 StatErrorActivate: False
+	 	 	 	 	 InputFile: data/2bin.root	 HistName: b	 HistoPath: 	 HistoAddress: 0x7ffe74667ad0
+	 End of Channel chan2
+	 Channel Name: chan3	 InputFile: 
+	 Data:
+	 	 InputFile: data/2bin.root	 HistoName: n2	 HistoPath: 	 HistoAddress: 0x7ffe74668bb0
+	 statErrorConfig:
+	 	 RelErrorThreshold: 0.05	 ConstraintType: Gaussian
+	 Samples: 
+	 	 Name: b	 	 Channel: chan3	 NormalizeByTheory: False	 StatErrorActivate: False
+	 	 	 	 	 InputFile: data/2bin.root	 HistName: b	 HistoPath: 	 HistoAddress: 0x7ffe74669c70
+	 End of Channel chan3
+	 Channel Name: chan4	 InputFile: 
+	 Data:
+	 	 InputFile: data/2bin.root	 HistoName: m2	 HistoPath: 	 HistoAddress: 0x7ffe745f3960
+	 statErrorConfig:
+	 	 RelErrorThreshold: 0.05	 ConstraintType: Gaussian
+	 Samples: 
+	 	 Name: s2	 	 Channel: chan4	 NormalizeByTheory: False	 StatErrorActivate: False
+	 	 	 	 	 InputFile: data/2bin.root	 HistName: s2	 HistoPath: 	 HistoAddress: 0x7ffe7466ad60
+	 	 Name: b	 	 Channel: chan4	 NormalizeByTheory: False	 StatErrorActivate: False
+	 	 	 	 	 InputFile: data/2bin.root	 HistName: b	 HistoPath: 	 HistoAddress: 0x7ffe745f4b50
+	 End of Channel chan4
+End Measurement: meas
+Making Model and Measurements (Fast) for measurement: meas
+using lumi = 1 and lumiError = 0.1 including bins between 0 and 1
+fixing the following parameters:
+   Lumi
+Checking if output directory : results -  exists
+Creating the output file: results/StatModel_meas.root
+Creating the table file: results/StatModel_results.table
+Creating the HistoToWorkspaceFactoryFast factory
+Setting preprocess functions
+Starting to process channel: chan1
+
+
+-------------------
+Starting to process chan1 channel with 1 observables
+lumi str = [1,0,10]
+lumi Error str = nominalLumi[1,0,2],0.1
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan1) importing RooConstVar::b_chan1_epsilon
+b_chan1 has no variation histograms 
+processing hist b
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(b_chan1nominalDHist): fit range of variable obs_x_chan1 expanded to nearest bin boundaries: [0,1] --> [0,1]
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan1) importing dataset b_chan1nominalDHist
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan1) importing RooHistFunc::b_chan1_nominal
+Sample: b in channel: chan1 to be include a ShapeFactor.
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan1) importing RooRealVar::gamma_B1_bin_0
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan1) importing ParamHistFunc::chan1_B1_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan1) using existing copy of RooRealVar::obs_x_chan1 for import of ParamHistFunc::chan1_B1_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan1) using existing copy of RooRealVar::gamma_B1_bin_0 for import of ParamHistFunc::chan1_B1_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan1) importing RooProduct::b_chan1_overallSyst_x_Exp_x_chan1_B1_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan1) using existing copy of RooProduct::b_chan1_overallSyst_x_Exp for import of RooProduct::b_chan1_overallSyst_x_Exp_x_chan1_B1_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan1) using existing copy of RooHistFunc::b_chan1_nominal for import of RooProduct::b_chan1_overallSyst_x_Exp_x_chan1_B1_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan1) using existing copy of RooRealVar::obs_x_chan1 for import of RooProduct::b_chan1_overallSyst_x_Exp_x_chan1_B1_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan1) using existing copy of RooConstVar::b_chan1_epsilon for import of RooProduct::b_chan1_overallSyst_x_Exp_x_chan1_B1_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan1) using existing copy of ParamHistFunc::chan1_B1_shapeFactor for import of RooProduct::b_chan1_overallSyst_x_Exp_x_chan1_B1_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan1) using existing copy of RooRealVar::gamma_B1_bin_0 for import of RooProduct::b_chan1_overallSyst_x_Exp_x_chan1_B1_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan1) importing RooRealSumPdf::chan1_model
+-----------------------------------------
+import model into workspace
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan1) importing RooProdPdf::model_chan1
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan1) using existing copy of RooGaussian::lumiConstraint for import of RooProdPdf::model_chan1
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan1) using existing copy of RooConstVar::0.1 for import of RooProdPdf::model_chan1
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan1) using existing copy of RooRealVar::Lumi for import of RooProdPdf::model_chan1
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan1) using existing copy of RooRealVar::nominalLumi for import of RooProdPdf::model_chan1
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan1) using existing copy of RooRealSumPdf::chan1_model for import of RooProdPdf::model_chan1
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan1) using existing copy of RooProduct::L_x_b_chan1_overallSyst_x_Exp_x_chan1_B1_shapeFactor for import of RooProdPdf::model_chan1
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan1) using existing copy of RooConstVar::1 for import of RooProdPdf::model_chan1
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan1) using existing copy of RooProduct::b_chan1_overallSyst_x_Exp_x_chan1_B1_shapeFactor for import of RooProdPdf::model_chan1
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan1) using existing copy of RooProduct::b_chan1_overallSyst_x_Exp for import of RooProdPdf::model_chan1
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan1) using existing copy of RooHistFunc::b_chan1_nominal for import of RooProdPdf::model_chan1
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan1) using existing copy of RooRealVar::obs_x_chan1 for import of RooProdPdf::model_chan1
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan1) using existing copy of RooConstVar::b_chan1_epsilon for import of RooProdPdf::model_chan1
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan1) using existing copy of ParamHistFunc::chan1_B1_shapeFactor for import of RooProdPdf::model_chan1
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan1) using existing copy of RooRealVar::gamma_B1_bin_0 for import of RooProdPdf::model_chan1
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan1) using existing copy of RooRealVar::binWidth_obs_x_chan1_0 for import of RooProdPdf::model_chan1
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(chan1_model_Int[obs_x_chan1]) using numeric integrator RooBinIntegrator to calculate Int(obs_x_chan1)
+RooDataSet::AsimovData[obs_x_chan1,weight:binWeightAsimov] = 1 entries (1 weighted)
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan1) importing dataset AsimovData
+[#1] INFO:ObjectHandling -- RooWorkSpace::import(chan1) changing name of dataset from  AsimovData to asimovData
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan1) importing dataset obsData
+
+RooWorkspace(chan1) chan1 workspace contents
+
+variables
+---------
+(Lumi,binWidth_obs_x_chan1_0,gamma_B1_bin_0,nominalLumi,obs_x_chan1,weightVar)
+
+p.d.f.s
+-------
+RooRealSumPdf::chan1_model[ binWidth_obs_x_chan1_0 * L_x_b_chan1_overallSyst_x_Exp_x_chan1_B1_shapeFactor ] = 1/1
+RooGaussian::lumiConstraint[ x=Lumi mean=nominalLumi sigma=0.1 ] = 1
+RooProdPdf::model_chan1[ lumiConstraint * chan1_model(obs_x_chan1) ] = 1
+
+functions
+--------
+RooProduct::L_x_b_chan1_overallSyst_x_Exp_x_chan1_B1_shapeFactor[ 1 * b_chan1_overallSyst_x_Exp_x_chan1_B1_shapeFactor ] = 1
+RooHistFunc::b_chan1_nominal[ depList=(obs_x_chan1) ] = 1
+RooProduct::b_chan1_overallSyst_x_Exp[ b_chan1_nominal * b_chan1_epsilon ] = 1
+RooProduct::b_chan1_overallSyst_x_Exp_x_chan1_B1_shapeFactor[ b_chan1_overallSyst_x_Exp * chan1_B1_shapeFactor ] = 1
+ParamHistFunc::chan1_B1_shapeFactor[ ] = 1
+
+datasets
+--------
+RooDataSet::asimovData(obs_x_chan1)
+RooDataSet::obsData(obs_x_chan1)
+
+embedded datasets (in pdfs and functions)
+-----------------------------------------
+RooDataHist::b_chan1nominalDHist(obs_x_chan1)
+
+named sets
+----------
+ModelConfig_GlobalObservables:()
+ModelConfig_Observables:(obs_x_chan1)
+coefList:(binWidth_obs_x_chan1_0)
+constraintTerms:(lumiConstraint)
+globalObservables:()
+likelihoodTerms:(chan1_model)
+obsAndWeight:(weightVar,obs_x_chan1)
+observables:(obs_x_chan1)
+observablesSet:(obs_x_chan1)
+shapeList:(L_x_b_chan1_overallSyst_x_Exp_x_chan1_B1_shapeFactor)
+
+generic objects
+---------------
+RooStats::ModelConfig::ModelConfig
+
+Setting Parameter(s) of Interest as: MU 
+WARNING: Can't find parameter of interest: MU in Workspace. Not setting in ModelConfig.
+
+=== Using the following for ModelConfig ===
+Observables:             RooArgSet:: = (obs_x_chan1)
+Parameters of Interest:  RooArgSet:: = ()
+Nuisance Parameters:     RooArgSet:: = (gamma_B1_bin_0)
+Global Observables:      RooArgSet:: = ()
+PDF:                     RooProdPdf::model_chan1[ lumiConstraint * chan1_model(obs_x_chan1) ] = 1
+
+Opening File to hold channel: results/StatModel_chan1_meas_model.root
+About to write channel measurement to file
+Writing sample: b
+Saved all histograms
+Saved Measurement
+Successfully wrote channel to file
+Starting to process channel: chan2
+
+
+-------------------
+Starting to process chan2 channel with 1 observables
+lumi str = [1,0,10]
+lumi Error str = nominalLumi[1,0,2],0.1
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) importing RooConstVar::s1_chan2_epsilon
+making normFactor: MU
+s1_chan2 has no variation histograms 
+processing hist s1
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(s1_chan2nominalDHist): fit range of variable obs_x_chan2 expanded to nearest bin boundaries: [0,1] --> [0,1]
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) importing dataset s1_chan2nominalDHist
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) importing RooHistFunc::s1_chan2_nominal
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) importing RooConstVar::b_chan2_epsilon
+b_chan2 has no variation histograms 
+processing hist b
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(b_chan2nominalDHist): fit range of variable obs_x_chan2 expanded to nearest bin boundaries: [0,1] --> [0,1]
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) importing dataset b_chan2nominalDHist
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) importing RooHistFunc::b_chan2_nominal
+Sample: b in channel: chan2 to be include a ShapeFactor.
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) importing RooRealVar::gamma_B1_bin_0
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) importing ParamHistFunc::chan2_B1_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) using existing copy of RooRealVar::obs_x_chan2 for import of ParamHistFunc::chan2_B1_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) using existing copy of RooRealVar::gamma_B1_bin_0 for import of ParamHistFunc::chan2_B1_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) importing RooProduct::b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) using existing copy of RooProduct::b_chan2_overallSyst_x_Exp for import of RooProduct::b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) using existing copy of RooHistFunc::b_chan2_nominal for import of RooProduct::b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) using existing copy of RooRealVar::obs_x_chan2 for import of RooProduct::b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) using existing copy of RooConstVar::b_chan2_epsilon for import of RooProduct::b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) using existing copy of ParamHistFunc::chan2_B1_shapeFactor for import of RooProduct::b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) using existing copy of RooRealVar::gamma_B1_bin_0 for import of RooProduct::b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) importing RooRealSumPdf::chan2_model
+-----------------------------------------
+import model into workspace
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) importing RooProdPdf::model_chan2
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) using existing copy of RooGaussian::lumiConstraint for import of RooProdPdf::model_chan2
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) using existing copy of RooConstVar::0.1 for import of RooProdPdf::model_chan2
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) using existing copy of RooRealVar::Lumi for import of RooProdPdf::model_chan2
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) using existing copy of RooRealVar::nominalLumi for import of RooProdPdf::model_chan2
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) using existing copy of RooRealSumPdf::chan2_model for import of RooProdPdf::model_chan2
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) using existing copy of RooProduct::L_x_s1_chan2_overallSyst_x_Exp for import of RooProdPdf::model_chan2
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) using existing copy of RooConstVar::1 for import of RooProdPdf::model_chan2
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) using existing copy of RooProduct::s1_chan2_overallSyst_x_Exp for import of RooProdPdf::model_chan2
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) using existing copy of RooHistFunc::s1_chan2_nominal for import of RooProdPdf::model_chan2
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) using existing copy of RooRealVar::obs_x_chan2 for import of RooProdPdf::model_chan2
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) using existing copy of RooProduct::s1_chan2_overallNorm_x_sigma_epsilon for import of RooProdPdf::model_chan2
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) using existing copy of RooRealVar::MU for import of RooProdPdf::model_chan2
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) using existing copy of RooConstVar::s1_chan2_epsilon for import of RooProdPdf::model_chan2
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) using existing copy of RooRealVar::binWidth_obs_x_chan2_0 for import of RooProdPdf::model_chan2
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) using existing copy of RooProduct::L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor for import of RooProdPdf::model_chan2
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) using existing copy of RooProduct::b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor for import of RooProdPdf::model_chan2
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) using existing copy of RooProduct::b_chan2_overallSyst_x_Exp for import of RooProdPdf::model_chan2
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) using existing copy of RooHistFunc::b_chan2_nominal for import of RooProdPdf::model_chan2
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) using existing copy of RooConstVar::b_chan2_epsilon for import of RooProdPdf::model_chan2
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) using existing copy of ParamHistFunc::chan2_B1_shapeFactor for import of RooProdPdf::model_chan2
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) using existing copy of RooRealVar::gamma_B1_bin_0 for import of RooProdPdf::model_chan2
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) using existing copy of RooRealVar::binWidth_obs_x_chan2_1 for import of RooProdPdf::model_chan2
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(chan2_model_Int[obs_x_chan2]) using numeric integrator RooBinIntegrator to calculate Int(obs_x_chan2)
+RooDataSet::AsimovData[obs_x_chan2,weight:binWeightAsimov] = 1 entries (1.3 weighted)
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) importing dataset AsimovData
+[#1] INFO:ObjectHandling -- RooWorkSpace::import(chan2) changing name of dataset from  AsimovData to asimovData
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan2) importing dataset obsData
+
+RooWorkspace(chan2) chan2 workspace contents
+
+variables
+---------
+(Lumi,MU,binWidth_obs_x_chan2_0,binWidth_obs_x_chan2_1,gamma_B1_bin_0,nominalLumi,obs_x_chan2,weightVar)
+
+p.d.f.s
+-------
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ] = 1.3/1.3
+RooGaussian::lumiConstraint[ x=Lumi mean=nominalLumi sigma=0.1 ] = 1
+RooProdPdf::model_chan2[ lumiConstraint * chan2_model(obs_x_chan2) ] = 1.3
+
+functions
+--------
+RooProduct::L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor[ 1 * b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ] = 1
+RooProduct::L_x_s1_chan2_overallSyst_x_Exp[ 1 * s1_chan2_overallSyst_x_Exp ] = 0.3
+RooHistFunc::b_chan2_nominal[ depList=(obs_x_chan2) ] = 1
+RooProduct::b_chan2_overallSyst_x_Exp[ b_chan2_nominal * b_chan2_epsilon ] = 1
+RooProduct::b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor[ b_chan2_overallSyst_x_Exp * chan2_B1_shapeFactor ] = 1
+ParamHistFunc::chan2_B1_shapeFactor[ ] = 1
+RooHistFunc::s1_chan2_nominal[ depList=(obs_x_chan2) ] = 0.3
+RooProduct::s1_chan2_overallNorm_x_sigma_epsilon[ MU * s1_chan2_epsilon ] = 1
+RooProduct::s1_chan2_overallSyst_x_Exp[ s1_chan2_nominal * s1_chan2_overallNorm_x_sigma_epsilon ] = 0.3
+
+datasets
+--------
+RooDataSet::asimovData(obs_x_chan2)
+RooDataSet::obsData(obs_x_chan2)
+
+embedded datasets (in pdfs and functions)
+-----------------------------------------
+RooDataHist::s1_chan2nominalDHist(obs_x_chan2)
+RooDataHist::b_chan2nominalDHist(obs_x_chan2)
+
+named sets
+----------
+ModelConfig_GlobalObservables:()
+ModelConfig_Observables:(obs_x_chan2)
+coefList:(binWidth_obs_x_chan2_0,binWidth_obs_x_chan2_1)
+constraintTerms:(lumiConstraint)
+globalObservables:()
+likelihoodTerms:(chan2_model)
+obsAndWeight:(weightVar,obs_x_chan2)
+observables:(obs_x_chan2)
+observablesSet:(obs_x_chan2)
+shapeList:(L_x_s1_chan2_overallSyst_x_Exp,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor)
+
+generic objects
+---------------
+RooStats::ModelConfig::ModelConfig
+
+Setting Parameter(s) of Interest as: MU 
+
+=== Using the following for ModelConfig ===
+Observables:             RooArgSet:: = (obs_x_chan2)
+Parameters of Interest:  RooArgSet:: = (MU)
+Nuisance Parameters:     RooArgSet:: = (gamma_B1_bin_0)
+Global Observables:      RooArgSet:: = ()
+PDF:                     RooProdPdf::model_chan2[ lumiConstraint * chan2_model(obs_x_chan2) ] = 1.3
+
+Opening File to hold channel: results/StatModel_chan2_meas_model.root
+About to write channel measurement to file
+Writing sample: s1
+Writing sample: b
+Saved all histograms
+Saved Measurement
+Successfully wrote channel to file
+Starting to process channel: chan3
+
+
+-------------------
+Starting to process chan3 channel with 1 observables
+lumi str = [1,0,10]
+lumi Error str = nominalLumi[1,0,2],0.1
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan3) importing RooConstVar::b_chan3_epsilon
+b_chan3 has no variation histograms 
+processing hist b
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(b_chan3nominalDHist): fit range of variable obs_x_chan3 expanded to nearest bin boundaries: [0,1] --> [0,1]
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan3) importing dataset b_chan3nominalDHist
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan3) importing RooHistFunc::b_chan3_nominal
+Sample: b in channel: chan3 to be include a ShapeFactor.
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan3) importing RooRealVar::gamma_B2_bin_0
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan3) importing ParamHistFunc::chan3_B2_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan3) using existing copy of RooRealVar::obs_x_chan3 for import of ParamHistFunc::chan3_B2_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan3) using existing copy of RooRealVar::gamma_B2_bin_0 for import of ParamHistFunc::chan3_B2_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan3) importing RooProduct::b_chan3_overallSyst_x_Exp_x_chan3_B2_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan3) using existing copy of RooProduct::b_chan3_overallSyst_x_Exp for import of RooProduct::b_chan3_overallSyst_x_Exp_x_chan3_B2_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan3) using existing copy of RooHistFunc::b_chan3_nominal for import of RooProduct::b_chan3_overallSyst_x_Exp_x_chan3_B2_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan3) using existing copy of RooRealVar::obs_x_chan3 for import of RooProduct::b_chan3_overallSyst_x_Exp_x_chan3_B2_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan3) using existing copy of RooConstVar::b_chan3_epsilon for import of RooProduct::b_chan3_overallSyst_x_Exp_x_chan3_B2_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan3) using existing copy of ParamHistFunc::chan3_B2_shapeFactor for import of RooProduct::b_chan3_overallSyst_x_Exp_x_chan3_B2_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan3) using existing copy of RooRealVar::gamma_B2_bin_0 for import of RooProduct::b_chan3_overallSyst_x_Exp_x_chan3_B2_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan3) importing RooRealSumPdf::chan3_model
+-----------------------------------------
+import model into workspace
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan3) importing RooProdPdf::model_chan3
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan3) using existing copy of RooGaussian::lumiConstraint for import of RooProdPdf::model_chan3
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan3) using existing copy of RooConstVar::0.1 for import of RooProdPdf::model_chan3
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan3) using existing copy of RooRealVar::Lumi for import of RooProdPdf::model_chan3
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan3) using existing copy of RooRealVar::nominalLumi for import of RooProdPdf::model_chan3
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan3) using existing copy of RooRealSumPdf::chan3_model for import of RooProdPdf::model_chan3
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan3) using existing copy of RooProduct::L_x_b_chan3_overallSyst_x_Exp_x_chan3_B2_shapeFactor for import of RooProdPdf::model_chan3
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan3) using existing copy of RooConstVar::1 for import of RooProdPdf::model_chan3
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan3) using existing copy of RooProduct::b_chan3_overallSyst_x_Exp_x_chan3_B2_shapeFactor for import of RooProdPdf::model_chan3
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan3) using existing copy of RooProduct::b_chan3_overallSyst_x_Exp for import of RooProdPdf::model_chan3
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan3) using existing copy of RooHistFunc::b_chan3_nominal for import of RooProdPdf::model_chan3
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan3) using existing copy of RooRealVar::obs_x_chan3 for import of RooProdPdf::model_chan3
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan3) using existing copy of RooConstVar::b_chan3_epsilon for import of RooProdPdf::model_chan3
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan3) using existing copy of ParamHistFunc::chan3_B2_shapeFactor for import of RooProdPdf::model_chan3
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan3) using existing copy of RooRealVar::gamma_B2_bin_0 for import of RooProdPdf::model_chan3
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan3) using existing copy of RooRealVar::binWidth_obs_x_chan3_0 for import of RooProdPdf::model_chan3
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(chan3_model_Int[obs_x_chan3]) using numeric integrator RooBinIntegrator to calculate Int(obs_x_chan3)
+RooDataSet::AsimovData[obs_x_chan3,weight:binWeightAsimov] = 1 entries (1 weighted)
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan3) importing dataset AsimovData
+[#1] INFO:ObjectHandling -- RooWorkSpace::import(chan3) changing name of dataset from  AsimovData to asimovData
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan3) importing dataset obsData
+
+RooWorkspace(chan3) chan3 workspace contents
+
+variables
+---------
+(Lumi,binWidth_obs_x_chan3_0,gamma_B2_bin_0,nominalLumi,obs_x_chan3,weightVar)
+
+p.d.f.s
+-------
+RooRealSumPdf::chan3_model[ binWidth_obs_x_chan3_0 * L_x_b_chan3_overallSyst_x_Exp_x_chan3_B2_shapeFactor ] = 1/1
+RooGaussian::lumiConstraint[ x=Lumi mean=nominalLumi sigma=0.1 ] = 1
+RooProdPdf::model_chan3[ lumiConstraint * chan3_model(obs_x_chan3) ] = 1
+
+functions
+--------
+RooProduct::L_x_b_chan3_overallSyst_x_Exp_x_chan3_B2_shapeFactor[ 1 * b_chan3_overallSyst_x_Exp_x_chan3_B2_shapeFactor ] = 1
+RooHistFunc::b_chan3_nominal[ depList=(obs_x_chan3) ] = 1
+RooProduct::b_chan3_overallSyst_x_Exp[ b_chan3_nominal * b_chan3_epsilon ] = 1
+RooProduct::b_chan3_overallSyst_x_Exp_x_chan3_B2_shapeFactor[ b_chan3_overallSyst_x_Exp * chan3_B2_shapeFactor ] = 1
+ParamHistFunc::chan3_B2_shapeFactor[ ] = 1
+
+datasets
+--------
+RooDataSet::asimovData(obs_x_chan3)
+RooDataSet::obsData(obs_x_chan3)
+
+embedded datasets (in pdfs and functions)
+-----------------------------------------
+RooDataHist::b_chan3nominalDHist(obs_x_chan3)
+
+named sets
+----------
+ModelConfig_GlobalObservables:()
+ModelConfig_Observables:(obs_x_chan3)
+coefList:(binWidth_obs_x_chan3_0)
+constraintTerms:(lumiConstraint)
+globalObservables:()
+likelihoodTerms:(chan3_model)
+obsAndWeight:(weightVar,obs_x_chan3)
+observables:(obs_x_chan3)
+observablesSet:(obs_x_chan3)
+shapeList:(L_x_b_chan3_overallSyst_x_Exp_x_chan3_B2_shapeFactor)
+
+generic objects
+---------------
+RooStats::ModelConfig::ModelConfig
+
+Setting Parameter(s) of Interest as: MU 
+WARNING: Can't find parameter of interest: MU in Workspace. Not setting in ModelConfig.
+
+=== Using the following for ModelConfig ===
+Observables:             RooArgSet:: = (obs_x_chan3)
+Parameters of Interest:  RooArgSet:: = ()
+Nuisance Parameters:     RooArgSet:: = (gamma_B2_bin_0)
+Global Observables:      RooArgSet:: = ()
+PDF:                     RooProdPdf::model_chan3[ lumiConstraint * chan3_model(obs_x_chan3) ] = 1
+
+Opening File to hold channel: results/StatModel_chan3_meas_model.root
+About to write channel measurement to file
+Writing sample: b
+Saved all histograms
+Saved Measurement
+Successfully wrote channel to file
+Starting to process channel: chan4
+
+
+-------------------
+Starting to process chan4 channel with 1 observables
+lumi str = [1,0,10]
+lumi Error str = nominalLumi[1,0,2],0.1
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) importing RooConstVar::s2_chan4_epsilon
+making normFactor: MU
+s2_chan4 has no variation histograms 
+processing hist s2
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(s2_chan4nominalDHist): fit range of variable obs_x_chan4 expanded to nearest bin boundaries: [0,1] --> [0,1]
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) importing dataset s2_chan4nominalDHist
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) importing RooHistFunc::s2_chan4_nominal
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) importing RooConstVar::b_chan4_epsilon
+b_chan4 has no variation histograms 
+processing hist b
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(b_chan4nominalDHist): fit range of variable obs_x_chan4 expanded to nearest bin boundaries: [0,1] --> [0,1]
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) importing dataset b_chan4nominalDHist
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) importing RooHistFunc::b_chan4_nominal
+Sample: b in channel: chan4 to be include a ShapeFactor.
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) importing RooRealVar::gamma_B2_bin_0
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) importing ParamHistFunc::chan4_B2_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) using existing copy of RooRealVar::obs_x_chan4 for import of ParamHistFunc::chan4_B2_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) using existing copy of RooRealVar::gamma_B2_bin_0 for import of ParamHistFunc::chan4_B2_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) importing RooProduct::b_chan4_overallSyst_x_Exp_x_chan4_B2_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) using existing copy of RooProduct::b_chan4_overallSyst_x_Exp for import of RooProduct::b_chan4_overallSyst_x_Exp_x_chan4_B2_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) using existing copy of RooHistFunc::b_chan4_nominal for import of RooProduct::b_chan4_overallSyst_x_Exp_x_chan4_B2_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) using existing copy of RooRealVar::obs_x_chan4 for import of RooProduct::b_chan4_overallSyst_x_Exp_x_chan4_B2_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) using existing copy of RooConstVar::b_chan4_epsilon for import of RooProduct::b_chan4_overallSyst_x_Exp_x_chan4_B2_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) using existing copy of ParamHistFunc::chan4_B2_shapeFactor for import of RooProduct::b_chan4_overallSyst_x_Exp_x_chan4_B2_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) using existing copy of RooRealVar::gamma_B2_bin_0 for import of RooProduct::b_chan4_overallSyst_x_Exp_x_chan4_B2_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) importing RooRealSumPdf::chan4_model
+-----------------------------------------
+import model into workspace
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) importing RooProdPdf::model_chan4
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) using existing copy of RooGaussian::lumiConstraint for import of RooProdPdf::model_chan4
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) using existing copy of RooConstVar::0.1 for import of RooProdPdf::model_chan4
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) using existing copy of RooRealVar::Lumi for import of RooProdPdf::model_chan4
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) using existing copy of RooRealVar::nominalLumi for import of RooProdPdf::model_chan4
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) using existing copy of RooRealSumPdf::chan4_model for import of RooProdPdf::model_chan4
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) using existing copy of RooProduct::L_x_s2_chan4_overallSyst_x_Exp for import of RooProdPdf::model_chan4
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) using existing copy of RooConstVar::1 for import of RooProdPdf::model_chan4
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) using existing copy of RooProduct::s2_chan4_overallSyst_x_Exp for import of RooProdPdf::model_chan4
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) using existing copy of RooHistFunc::s2_chan4_nominal for import of RooProdPdf::model_chan4
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) using existing copy of RooRealVar::obs_x_chan4 for import of RooProdPdf::model_chan4
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) using existing copy of RooProduct::s2_chan4_overallNorm_x_sigma_epsilon for import of RooProdPdf::model_chan4
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) using existing copy of RooRealVar::MU for import of RooProdPdf::model_chan4
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) using existing copy of RooConstVar::s2_chan4_epsilon for import of RooProdPdf::model_chan4
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) using existing copy of RooRealVar::binWidth_obs_x_chan4_0 for import of RooProdPdf::model_chan4
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) using existing copy of RooProduct::L_x_b_chan4_overallSyst_x_Exp_x_chan4_B2_shapeFactor for import of RooProdPdf::model_chan4
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) using existing copy of RooProduct::b_chan4_overallSyst_x_Exp_x_chan4_B2_shapeFactor for import of RooProdPdf::model_chan4
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) using existing copy of RooProduct::b_chan4_overallSyst_x_Exp for import of RooProdPdf::model_chan4
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) using existing copy of RooHistFunc::b_chan4_nominal for import of RooProdPdf::model_chan4
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) using existing copy of RooConstVar::b_chan4_epsilon for import of RooProdPdf::model_chan4
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) using existing copy of ParamHistFunc::chan4_B2_shapeFactor for import of RooProdPdf::model_chan4
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) using existing copy of RooRealVar::gamma_B2_bin_0 for import of RooProdPdf::model_chan4
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) using existing copy of RooRealVar::binWidth_obs_x_chan4_1 for import of RooProdPdf::model_chan4
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(chan4_model_Int[obs_x_chan4]) using numeric integrator RooBinIntegrator to calculate Int(obs_x_chan4)
+RooDataSet::AsimovData[obs_x_chan4,weight:binWeightAsimov] = 1 entries (1.4 weighted)
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) importing dataset AsimovData
+[#1] INFO:ObjectHandling -- RooWorkSpace::import(chan4) changing name of dataset from  AsimovData to asimovData
+[#1] INFO:ObjectHandling -- RooWorkspace::import(chan4) importing dataset obsData
+
+RooWorkspace(chan4) chan4 workspace contents
+
+variables
+---------
+(Lumi,MU,binWidth_obs_x_chan4_0,binWidth_obs_x_chan4_1,gamma_B2_bin_0,nominalLumi,obs_x_chan4,weightVar)
+
+p.d.f.s
+-------
+RooRealSumPdf::chan4_model[ binWidth_obs_x_chan4_0 * L_x_s2_chan4_overallSyst_x_Exp + binWidth_obs_x_chan4_1 * L_x_b_chan4_overallSyst_x_Exp_x_chan4_B2_shapeFactor ] = 1.4/1.4
+RooGaussian::lumiConstraint[ x=Lumi mean=nominalLumi sigma=0.1 ] = 1
+RooProdPdf::model_chan4[ lumiConstraint * chan4_model(obs_x_chan4) ] = 1.4
+
+functions
+--------
+RooProduct::L_x_b_chan4_overallSyst_x_Exp_x_chan4_B2_shapeFactor[ 1 * b_chan4_overallSyst_x_Exp_x_chan4_B2_shapeFactor ] = 1
+RooProduct::L_x_s2_chan4_overallSyst_x_Exp[ 1 * s2_chan4_overallSyst_x_Exp ] = 0.4
+RooHistFunc::b_chan4_nominal[ depList=(obs_x_chan4) ] = 1
+RooProduct::b_chan4_overallSyst_x_Exp[ b_chan4_nominal * b_chan4_epsilon ] = 1
+RooProduct::b_chan4_overallSyst_x_Exp_x_chan4_B2_shapeFactor[ b_chan4_overallSyst_x_Exp * chan4_B2_shapeFactor ] = 1
+ParamHistFunc::chan4_B2_shapeFactor[ ] = 1
+RooHistFunc::s2_chan4_nominal[ depList=(obs_x_chan4) ] = 0.4
+RooProduct::s2_chan4_overallNorm_x_sigma_epsilon[ MU * s2_chan4_epsilon ] = 1
+RooProduct::s2_chan4_overallSyst_x_Exp[ s2_chan4_nominal * s2_chan4_overallNorm_x_sigma_epsilon ] = 0.4
+
+datasets
+--------
+RooDataSet::asimovData(obs_x_chan4)
+RooDataSet::obsData(obs_x_chan4)
+
+embedded datasets (in pdfs and functions)
+-----------------------------------------
+RooDataHist::s2_chan4nominalDHist(obs_x_chan4)
+RooDataHist::b_chan4nominalDHist(obs_x_chan4)
+
+named sets
+----------
+ModelConfig_GlobalObservables:()
+ModelConfig_Observables:(obs_x_chan4)
+coefList:(binWidth_obs_x_chan4_0,binWidth_obs_x_chan4_1)
+constraintTerms:(lumiConstraint)
+globalObservables:()
+likelihoodTerms:(chan4_model)
+obsAndWeight:(weightVar,obs_x_chan4)
+observables:(obs_x_chan4)
+observablesSet:(obs_x_chan4)
+shapeList:(L_x_s2_chan4_overallSyst_x_Exp,L_x_b_chan4_overallSyst_x_Exp_x_chan4_B2_shapeFactor)
+
+generic objects
+---------------
+RooStats::ModelConfig::ModelConfig
+
+Setting Parameter(s) of Interest as: MU 
+
+=== Using the following for ModelConfig ===
+Observables:             RooArgSet:: = (obs_x_chan4)
+Parameters of Interest:  RooArgSet:: = (MU)
+Nuisance Parameters:     RooArgSet:: = (gamma_B2_bin_0)
+Global Observables:      RooArgSet:: = ()
+PDF:                     RooProdPdf::model_chan4[ lumiConstraint * chan4_model(obs_x_chan4) ] = 1.4
+
+Opening File to hold channel: results/StatModel_chan4_meas_model.root
+About to write channel measurement to file
+Writing sample: s2
+Writing sample: b
+Saved all histograms
+Saved Measurement
+Successfully wrote channel to file
+full list of observables:
+RooArgList:: = (obs_x_chan1,obs_x_chan2,obs_x_chan3,obs_x_chan4)
+
+
+------------------
+ Entering combination
+-----------------------------------------
+create toy data for chan1,chan2,chan3,chan4
+RooDataSet::AsimovData0[obs_x_chan1,channelCat,weight:binWeightAsimov] = 1 entries (1 weighted)
+RooDataSet::AsimovData1[obs_x_chan2,channelCat,weight:binWeightAsimov] = 1 entries (1.3 weighted)
+RooDataSet::AsimovData2[obs_x_chan3,channelCat,weight:binWeightAsimov] = 1 entries (1 weighted)
+RooDataSet::AsimovData3[obs_x_chan4,channelCat,weight:binWeightAsimov] = 1 entries (1.4 weighted)
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing dataset asimovDataFullModel
+[#1] INFO:ObjectHandling -- RooWorkSpace::import(combined) changing name of dataset from  asimovDataFullModel to asimovData
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooRealVar::obs_x_chan1
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooRealVar::obs_x_chan2
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooRealVar::obs_x_chan3
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooRealVar::obs_x_chan4
+Merging data for channel chan1
+Merging data for channel chan2
+Merging data for channel chan3
+Merging data for channel chan4
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing dataset chan1
+[#1] INFO:ObjectHandling -- RooWorkSpace::import(combined) changing name of dataset from  chan1 to obsData
+
+RooWorkspace(combined) combined contents
+
+variables
+---------
+(channelCat,obs_x_chan1,obs_x_chan2,obs_x_chan3,obs_x_chan4,weightVar)
+
+datasets
+--------
+RooDataSet::asimovData(obs_x_chan1,obs_x_chan2,obs_x_chan3,obs_x_chan4,weightVar,channelCat)
+RooDataSet::obsData(channelCat,obs_x_chan1,obs_x_chan2,obs_x_chan3,obs_x_chan4)
+
+named sets
+----------
+ModelConfig_GlobalObservables:()
+ModelConfig_Observables:(obs_x_chan1,obs_x_chan2,obs_x_chan3,obs_x_chan4,weightVar,channelCat)
+globalObservables:()
+observables:(obs_x_chan1,obs_x_chan2,obs_x_chan3,obs_x_chan4,weightVar,channelCat)
+
+
+
+----------------
+ Importing combined model
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing dataset b_chan1nominalDHist
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing dataset s1_chan2nominalDHist
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing dataset b_chan2nominalDHist
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing dataset b_chan3nominalDHist
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing dataset s2_chan4nominalDHist
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing dataset b_chan4nominalDHist
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooSimultaneous::simPdf
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) using existing copy of RooCategory::channelCat for import of RooSimultaneous::simPdf
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooProdPdf::model_chan1
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooGaussian::lumiConstraint
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooConstVar::0.1
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooRealVar::Lumi
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooRealVar::nominalLumi
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooRealSumPdf::chan1_model
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooProduct::L_x_b_chan1_overallSyst_x_Exp_x_chan1_B1_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooConstVar::1
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooProduct::b_chan1_overallSyst_x_Exp_x_chan1_B1_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooProduct::b_chan1_overallSyst_x_Exp
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooHistFunc::b_chan1_nominal
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) using existing copy of RooRealVar::obs_x_chan1 for import of RooSimultaneous::simPdf
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooConstVar::b_chan1_epsilon
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing ParamHistFunc::chan1_B1_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooRealVar::gamma_B1_bin_0
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooRealVar::binWidth_obs_x_chan1_0
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooProdPdf::model_chan2
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooRealSumPdf::chan2_model
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooProduct::L_x_s1_chan2_overallSyst_x_Exp
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooProduct::s1_chan2_overallSyst_x_Exp
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooHistFunc::s1_chan2_nominal
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) using existing copy of RooRealVar::obs_x_chan2 for import of RooSimultaneous::simPdf
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooProduct::s1_chan2_overallNorm_x_sigma_epsilon
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooRealVar::MU
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooConstVar::s1_chan2_epsilon
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooRealVar::binWidth_obs_x_chan2_0
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooProduct::L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooProduct::b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooProduct::b_chan2_overallSyst_x_Exp
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooHistFunc::b_chan2_nominal
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooConstVar::b_chan2_epsilon
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing ParamHistFunc::chan2_B1_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooRealVar::binWidth_obs_x_chan2_1
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooProdPdf::model_chan3
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooRealSumPdf::chan3_model
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooProduct::L_x_b_chan3_overallSyst_x_Exp_x_chan3_B2_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooProduct::b_chan3_overallSyst_x_Exp_x_chan3_B2_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooProduct::b_chan3_overallSyst_x_Exp
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooHistFunc::b_chan3_nominal
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) using existing copy of RooRealVar::obs_x_chan3 for import of RooSimultaneous::simPdf
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooConstVar::b_chan3_epsilon
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing ParamHistFunc::chan3_B2_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooRealVar::gamma_B2_bin_0
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooRealVar::binWidth_obs_x_chan3_0
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooProdPdf::model_chan4
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooRealSumPdf::chan4_model
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooProduct::L_x_s2_chan4_overallSyst_x_Exp
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooProduct::s2_chan4_overallSyst_x_Exp
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooHistFunc::s2_chan4_nominal
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) using existing copy of RooRealVar::obs_x_chan4 for import of RooSimultaneous::simPdf
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooProduct::s2_chan4_overallNorm_x_sigma_epsilon
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooConstVar::s2_chan4_epsilon
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooRealVar::binWidth_obs_x_chan4_0
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooProduct::L_x_b_chan4_overallSyst_x_Exp_x_chan4_B2_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooProduct::b_chan4_overallSyst_x_Exp_x_chan4_B2_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooProduct::b_chan4_overallSyst_x_Exp
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooHistFunc::b_chan4_nominal
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooConstVar::b_chan4_epsilon
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing ParamHistFunc::chan4_B2_shapeFactor
+[#1] INFO:ObjectHandling -- RooWorkspace::import(combined) importing RooRealVar::binWidth_obs_x_chan4_1
+setting Lumi constant
+Setting Parameter(s) of Interest as: MU 
+
+=== Using the following for ModelConfig ===
+Observables:             RooArgSet:: = (obs_x_chan1,obs_x_chan2,obs_x_chan3,obs_x_chan4,weightVar,channelCat)
+Parameters of Interest:  RooArgSet:: = (MU)
+Nuisance Parameters:     RooArgSet:: = (gamma_B1_bin_0,gamma_B2_bin_0)
+Global Observables:      RooArgSet:: = ()
+PDF:                     RooSimultaneous::simPdf[ indexCat=channelCat chan1=model_chan1 chan2=model_chan2 chan3=model_chan3 chan4=model_chan4 ] = 0.35
+
+Writing combined workspace to file: results/StatModel_combined_meas_model.root
+Writing combined measurement to file: results/StatModel_combined_meas_model.root
+Writing sample: b
+Writing sample: s1
+Writing sample: b
+Writing sample: b
+Writing sample: s2
+Writing sample: b
+Saved all histograms
+Saved Measurement
+[#1] INFO:Minization -- p.d.f. provides expected number of events, including extended term in likelihood.
+[#1] INFO:Minization -- RooProdPdf::getConstraints(model_chan1) omitting term lumiConstraint as constraint term as it does not share any parameters with the other pdfs in product. To force inclusion in likelihood, add an explicit Constrain() argument for the target parameter
+Minuit2Minimizer: Minimize with max-calls 1500 convergence for edm < 1 strategy 0
+RooAbsTestStatistic::initSimMode: creating slave calculator #0 for state chan1 (1 dataset entries)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(chan1_model_Int[obs_x_chan1]) using numeric integrator RooBinIntegrator to calculate Int(obs_x_chan1)
+RooAbsTestStatistic::initSimMode: creating slave calculator #1 for state chan2 (1 dataset entries)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(chan2_model_Int[obs_x_chan2]) using numeric integrator RooBinIntegrator to calculate Int(obs_x_chan2)
+RooAbsTestStatistic::initSimMode: creating slave calculator #2 for state chan3 (1 dataset entries)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(chan3_model_Int[obs_x_chan3]) using numeric integrator RooBinIntegrator to calculate Int(obs_x_chan3)
+RooAbsTestStatistic::initSimMode: creating slave calculator #3 for state chan4 (1 dataset entries)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(chan4_model_Int[obs_x_chan4]) using numeric integrator RooBinIntegrator to calculate Int(obs_x_chan4)
+[#1] INFO:Fitting -- RooAbsTestStatistic::initSimMode: created 4 slave calculators.
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(chan1_model_Int[obs_x_chan1]) using numeric integrator RooBinIntegrator to calculate Int(obs_x_chan1)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(chan2_model_Int[obs_x_chan2]) using numeric integrator RooBinIntegrator to calculate Int(obs_x_chan2)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(chan3_model_Int[obs_x_chan3]) using numeric integrator RooBinIntegrator to calculate Int(obs_x_chan3)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(chan4_model_Int[obs_x_chan4]) using numeric integrator RooBinIntegrator to calculate Int(obs_x_chan4)
+MnSeedGenerator: for initial parameters FCN = 12.0083
+MnSeedGenerator: Initial state:   - FCN =   12.00834946196 Edm =      1.31692 NCalls =     13
+VariableMetric: start iterating until Edm is < 0.001
+VariableMetric: Initial state   - FCN =   12.00834946196 Edm =      1.31692 NCalls =     13
+VariableMetric: Iteration #   0 - FCN =   12.00834946196 Edm =      1.31692 NCalls =     13
+VariableMetric: Iteration #   1 - FCN =   10.83729431525 Edm =     0.125345 NCalls =     21
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-2.54382, gamma_B1_bin_0=0.34676, gamma_B2_bin_0=3.45734
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-0.416385), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -0.763145,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.34676), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-3.49808, gamma_B1_bin_0=0.316366, gamma_B2_bin_0=3.88042
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-0.733059), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -1.04943,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.316366), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-1.46216, gamma_B1_bin_0=0.382466, gamma_B2_bin_0=3.01225
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-0.056180), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -0.438647,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.382466), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-1.42102, gamma_B1_bin_0=0.383852, gamma_B2_bin_0=2.996
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-0.042455), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -0.426307,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.383852), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-1.37988, gamma_B1_bin_0=0.385241, gamma_B2_bin_0=2.9798
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-0.028724), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -0.413965,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.385241), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-1.33873, gamma_B1_bin_0=0.386632, gamma_B2_bin_0=2.96364
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-0.014988), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -0.401619,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.386632), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+VariableMetric: Iteration #   2 - FCN =    10.2259694951 Edm =    0.0885548 NCalls =     38
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-6.14183, gamma_B1_bin_0=0.501909, gamma_B2_bin_0=4.55266
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-1.340640), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -1.84255,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.501909), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-1.83708, gamma_B1_bin_0=0.406631, gamma_B2_bin_0=3.09056
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-0.144492), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -0.551123,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.406631), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+VariableMetric: Iteration #   3 - FCN =   10.21927622675 Edm =     0.499893 NCalls =     47
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-7.56252, gamma_B1_bin_0=0.470002, gamma_B2_bin_0=4.84688
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-1.798755), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -2.26876,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.470002), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-2.24463, gamma_B1_bin_0=0.405219, gamma_B2_bin_0=3.17567
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-0.268170), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -0.673388,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.405219), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+VariableMetric: Iteration #   4 - FCN =   10.20910467616 Edm =     0.636323 NCalls =     56
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-7.49461, gamma_B1_bin_0=0.499126, gamma_B2_bin_0=4.84174
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-1.749256), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -2.24838,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.499126), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-2.26209, gamma_B1_bin_0=0.409708, gamma_B2_bin_0=3.1829
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-0.268918), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -0.678626,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.409708), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+VariableMetric: Iteration #   5 - FCN =   10.19924615261 Edm =     0.625728 NCalls =     65
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-7.52272, gamma_B1_bin_0=0.491358, gamma_B2_bin_0=4.84557
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-1.765458), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -2.25682,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.491358), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-2.29817, gamma_B1_bin_0=0.409101, gamma_B2_bin_0=3.19178
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-0.280349), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -0.68945,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.409101), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-1.34245, gamma_B1_bin_0=0.395649, gamma_B2_bin_0=2.94075
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-0.007084), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -0.402734,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.395649), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+VariableMetric: Iteration #   6 - FCN =   10.19876373798 Edm =     0.626556 NCalls =     75
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-7.52726, gamma_B1_bin_0=0.493792, gamma_B2_bin_0=4.85414
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-1.764386), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -2.25818,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.493792), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-2.30139, gamma_B1_bin_0=0.409477, gamma_B2_bin_0=3.19351
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-0.280939), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -0.690416,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.409477), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-1.34501, gamma_B1_bin_0=0.395701, gamma_B2_bin_0=2.94145
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-0.007801), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -0.403502,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.395701), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+VariableMetric: Iteration #   7 - FCN =   10.19828088098 Edm =     0.626938 NCalls =     85
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-7.52971, gamma_B1_bin_0=0.492938, gamma_B2_bin_0=4.85458
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-1.765974), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -2.25891,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.492938), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-2.30336, gamma_B1_bin_0=0.40938, gamma_B2_bin_0=3.19398
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-0.281629), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -0.691009,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.40938), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-1.34751, gamma_B1_bin_0=0.395731, gamma_B2_bin_0=2.94209
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-0.008521), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -0.404252,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.395731), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+VariableMetric: Iteration #   8 - FCN =   10.19779861886 Edm =     0.626526 NCalls =     95
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-7.53013, gamma_B1_bin_0=0.493187, gamma_B2_bin_0=4.85544
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-1.765851), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -2.25904,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.493187), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-2.305, gamma_B1_bin_0=0.409437, gamma_B2_bin_0=3.19451
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-0.282062), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -0.691499,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.409437), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-1.34999, gamma_B1_bin_0=0.395767, gamma_B2_bin_0=2.94273
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-0.009229), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -0.404996,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.395767), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+VariableMetric: Iteration #   9 - FCN =   10.19731693265 Edm =     0.626128 NCalls =    105
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-7.53114, gamma_B1_bin_0=0.493116, gamma_B2_bin_0=4.85605
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-1.766226), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -2.25934,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.493116), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-2.30673, gamma_B1_bin_0=0.40945, gamma_B2_bin_0=3.195
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-0.282570), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -0.69202,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.40945), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-1.35247, gamma_B1_bin_0=0.395802, gamma_B2_bin_0=2.94337
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-0.009939), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -0.405741,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.395802), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+VariableMetric: Iteration #  10 - FCN =   10.19683582087 Edm =      0.62573 NCalls =    115
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-7.53196, gamma_B1_bin_0=0.493144, gamma_B2_bin_0=4.85672
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-1.766445), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -2.25959,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.493144), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-2.30844, gamma_B1_bin_0=0.409476, gamma_B2_bin_0=3.19551
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-0.283055), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -0.692531,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.409476), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-1.35495, gamma_B1_bin_0=0.395837, gamma_B2_bin_0=2.94401
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-0.010648), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -0.406485,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.395837), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+VariableMetric: Iteration #  11 - FCN =   10.19635528229 Edm =     0.625334 NCalls =    125
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-7.53285, gamma_B1_bin_0=0.493142, gamma_B2_bin_0=4.85737
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-1.766712), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -2.25985,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.493142), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-2.31015, gamma_B1_bin_0=0.409499, gamma_B2_bin_0=3.19601
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-0.283546), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -0.693045,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.409499), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-1.35743, gamma_B1_bin_0=0.395872, gamma_B2_bin_0=2.94465
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-0.011357), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -0.407229,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.395872), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-1.31741, gamma_B1_bin_0=0.395197, gamma_B2_bin_0=2.93235
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-0.000027), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -0.395223,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.395197), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+VariableMetric: Iteration #  12 - FCN =   10.19587531574 Edm =     0.624939 NCalls =    137
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-7.55588, gamma_B1_bin_0=0.49308, gamma_B2_bin_0=4.86673
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-1.773685), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -2.26677,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.49308), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-2.31832, gamma_B1_bin_0=0.40955, gamma_B2_bin_0=3.19829
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-0.285946), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -0.695496,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.40955), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-1.36023, gamma_B1_bin_0=0.395908, gamma_B2_bin_0=2.94538
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-0.012161), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -0.408069,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.395908), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-1.31994, gamma_B1_bin_0=0.395232, gamma_B2_bin_0=2.933
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-0.000750), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -0.395982,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.395232), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+VariableMetric: Iteration #  13 - FCN =   10.19539290847 Edm =     0.626855 NCalls =    149
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-7.53444, gamma_B1_bin_0=0.493249, gamma_B2_bin_0=4.85886
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-1.767083), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -2.26033,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.493249), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-2.31356, gamma_B1_bin_0=0.409559, gamma_B2_bin_0=3.19704
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-0.284508), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -0.694067,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.409559), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-1.36239, gamma_B1_bin_0=0.395942, gamma_B2_bin_0=2.94593
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-0.012776), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -0.408718,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.395942), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-1.32245, gamma_B1_bin_0=0.395268, gamma_B2_bin_0=2.93365
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-0.001468), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -0.396735,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.395268), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-1.31466, gamma_B1_bin_0=0.394325, gamma_B2_bin_0=2.93365
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-0.000073), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -0.394397,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.394325), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+VariableMetric: Iteration #  14 - FCN =   10.19491408472 Edm =     0.624146 NCalls =    163
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-7.53578, gamma_B1_bin_0=0.492382, gamma_B2_bin_0=4.85913
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-1.768352), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -2.26073,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.492382), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-2.31519, gamma_B1_bin_0=0.409458, gamma_B2_bin_0=3.19746
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-0.285099), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -0.694557,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.409458), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-1.36486, gamma_B1_bin_0=0.395971, gamma_B2_bin_0=2.94657
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-0.013488), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -0.409459,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.395971), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-1.32496, gamma_B1_bin_0=0.395303, gamma_B2_bin_0=2.93429
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-0.002185), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -0.397488,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.395303), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-1.31795, gamma_B1_bin_0=0.395303, gamma_B2_bin_0=2.93429
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-0.000082), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -0.395384,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.395303), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (12.0195) to force MIGRAD to back out of this region. Error log follows
+Parameter values: MU=-1.31717, gamma_B1_bin_0=0.39436, gamma_B2_bin_0=2.93429
+RooRealSumPdf::chan2_model[ binWidth_obs_x_chan2_0 * L_x_s1_chan2_overallSyst_x_Exp + binWidth_obs_x_chan2_1 * L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor ]
+     p.d.f value is less than zero (-0.000791), forcing value to zero @ !funcList=(L_x_s1_chan2_overallSyst_x_Exp = -0.395151,L_x_b_chan2_overallSyst_x_Exp_x_chan2_B1_shapeFactor = 0.39436), !coefList=(binWidth_obs_x_chan2_0 = 1,binWidth_obs_x_chan2_1 = 1)
+
+VariableMetric: Iteration #  15 - FCN =   10.19443601383 Edm =  5.94441e+07 NCalls =    177
+VariableMetric: Iteration #  16 - FCN =   10.16669144193 Edm =  0.000795473 NCalls =    188
+VariableMetric: Iteration #  17 - FCN =   10.16591835731 Edm =  1.88165e-05 NCalls =    195
+VariableMetric: Iteration #  18 - FCN =   10.16590076233 Edm =  2.33007e-08 NCalls =    202
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = 10.1659007623270021
+Edm   = 2.33007233318278097e-08
+Nfcn  = 202
+MU	  = -1.31484	 +/-  0.00113514	(limited)
+gamma_B1_bin_0	  = 0.499969	 +/-  0.499571	(limited)
+gamma_B2_bin_0	  = 2.84082	 +/-  1.11588	(limited)
+Info in <Minuit2>: Minuit2Minimizer::Hesse : Hesse is valid - matrix is accurate
+MU=-1.31484
+B1=0.499969
+B2=2.84082
+root [1] 
