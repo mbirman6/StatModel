@@ -26,8 +26,6 @@ results minmzr(){
 	RooAbsReal* POI = (RooAbsReal*) mc->GetParametersOfInterest()->first();
 	double Nui1 = ws->var("gamma_B1_bin_0")->getVal();
 	double Nui2 = ws->var("gamma_B2_bin_0")->getVal();
-	// RooAbsReal* Nui1 = (RooAbsReal*) mc->GetNuisanceParameters()->first();
-	// RooAbsReal* Nui2 = (RooAbsReal*) mc->GetNuisanceParameters()->second();
 	// cout<<"Status="<<status<<"\nMU="<<MU->getVal()<<endl;
 	
 	tmp.status=status;
@@ -46,7 +44,6 @@ void buildWS(){
    meas.SetExportOnly(1);
    meas.SetPOI("MU");
    meas.SetLumi(1.0);
-   // meas.SetLumiRelErr(0.00001);
    meas.AddConstantParam("Lumi");
 
 // Channel 1
@@ -71,7 +68,7 @@ void buildWS(){
    s1.AddNormFactor("MU", 1.0, -15.0, 15.0);
    chan2.AddSample(s1);     
 
-   RooStats::HistFactory::Sample b("b", "b", "data/2bin.root");
+   // RooStats::HistFactory::Sample b("b", "b", "data/2bin.root");
    b.SetNormalizeByTheory(0);
    b.AddShapeFactor("B1");
    chan2.AddSample(b);         
@@ -83,10 +80,10 @@ void buildWS(){
    
    chan3.SetData("n2", "data/2bin.root");    
 
-   RooStats::HistFactory::Sample b("b", "b", "data/2bin.root");
-   b.SetNormalizeByTheory(0);
-   b.AddShapeFactor("B2");
-   chan3.AddSample(b);         
+   RooStats::HistFactory::Sample c("c", "c", "data/2bin.root");
+   c.SetNormalizeByTheory(0);
+   c.AddShapeFactor("B2");
+   chan3.AddSample(c);         
 
    meas.AddChannel(chan3);
    
@@ -100,22 +97,17 @@ void buildWS(){
    s2.AddNormFactor("MU", 1.0, -15.0, 15.0);
    chan4.AddSample(s2);     
 
-   RooStats::HistFactory::Sample b("b", "b", "data/2bin.root");
-   b.SetNormalizeByTheory(0);
-   b.AddShapeFactor("B2");
-   chan4.AddSample(b);         
+   // RooStats::HistFactory::Sample c("c", "c", "data/2bin.root");
+   c.SetNormalizeByTheory(0);
+   c.AddShapeFactor("B2");
+   chan4.AddSample(c);         
 
    meas.AddChannel(chan4);
 
 // I/O
    meas.CollectHistograms();
-
    meas.PrintTree();
-   
    RooStats::HistFactory::MakeModelAndMeasurementFast(meas);
-   
-   // TFile* f = new TFile("results/Results.root","recreate");
-   // meas.writeToFile(f);
 }
 
 void main_2bin(){
@@ -123,12 +115,10 @@ void main_2bin(){
 	UInt_t nbins=1;
 	UInt_t i;
 	UInt_t n1[N],m1[N],n2[N],m2[N];
-	Double_t mu,b,b1,b2,s1,s2;
-	TRandom3 r;
+	Double_t mu,b1,b2,s1,s2,c;
+	// TRandom3 r;
 	
 	TFile f1("results/2bin.root","recreate");
-
-	// TTree* t_output = new TTree("t_output","t_output");
 	
 	//Output histograms
 	TH1F *hstatus = new TH1F("status","status",20,-2,2);
@@ -139,43 +129,31 @@ void main_2bin(){
 	TH1F *hB2 = new TH1F("B2","B2",15,0,15);
 	TH1F *hB2_bli = new TH1F("B2_bli","B2_bli",15,0,15);
 
-// 	t_output->Branch("status","TH1F",&hstatus,32000,0);
-// 	t_output->Branch("MU","TH1F",&hMU,32000,0);
-
 	for(i=0;i<N;i++)
 	{
 		TFile f("data/2bin.root","recreate");
-		
-		// TTree* t_input = new TTree("t_input","t_input");
 		
 		//Input histograms
 		TH1F *hs1 = new TH1F("s1","s1",nbins,0,1);
 		TH1F *hs2 = new TH1F("s2","s2",nbins,0,1);
 		TH1F *hb = new TH1F("b","b",nbins,0,1);
-		
-		// t_input->Branch("b","TH1F",&hb,2000,0);
-		// t_input->Branch("s1","TH1F",&hs1,2000,0);
-		// t_input->Branch("s2","TH1F",&hs2,2000,0);
+		TH1F *hc = new TH1F("c","c",nbins,0,1);
 		
 		TH1F *hn1 = new TH1F("n1","n1",nbins,0,1);
 		TH1F *hm1 = new TH1F("m1","m1",nbins,0,1);
 		TH1F *hn2 = new TH1F("n2","n2",nbins,0,1);
 		TH1F *hm2 = new TH1F("m2","m2",nbins,0,1);
 		
-		// t_input->Branch("n1","TH1F",&hn1,2000,0);
-		// t_input->Branch("m1","TH1F",&hm1,2000,0);
-		// t_input->Branch("n2","TH1F",&hn2,2000,0);
-		// t_input->Branch("m2","TH1F",&hm2,2000,0);
-		
 		mu=1;
 		// b1=0.5;
 		// b2=0.5;
 		
 		b=1;
+		c=1;
 		s1=0.3;
 		s2=0.4;
 		
-		hs1->SetBinContent(1,s1); hs2->SetBinContent(1,s2); hb->SetBinContent(1,b);
+		hs1->SetBinContent(1,s1); hs2->SetBinContent(1,s2); hb->SetBinContent(1,b); hc->SetBinContent(1,c);
 		
 		// n1[i]=r.Poisson(b1);
 		// m1[i]=r.Poisson(b1+mu*s1);
@@ -183,17 +161,13 @@ void main_2bin(){
 		// m2[i]=r.Poisson(b2+mu*s2);
 		
 		n1[i]=1;
-		m1[i]=0;
+		m1[i]=3;
 		n2[i]=2;
 		m2[i]=3;
 
 		hn1->SetBinContent(1,n1[i]); hm1->SetBinContent(1,m1[i]); hn2->SetBinContent(1,n2[i]); hm2->SetBinContent(1,m2[i]);
 		
-		// t_input->Fill();
-		// t_input->Print();
-		
 		f.Write();
-		
 		buildWS();
 		results output=minmzr();
 		
@@ -211,9 +185,6 @@ void main_2bin(){
 		f.Close();
 	}
 	
-	// t_output->Fill();
-	// t_output->Print();
-
 	f1.Write();
 	f1.Close();
 	
