@@ -196,7 +196,7 @@ void main_2bin(){
 	
 	f1.Write();
 	f1.Close();
-	txtfile.close();
+	// txtfile.close();
 	
 	return;
 }
