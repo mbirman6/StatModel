@@ -1,4 +1,5 @@
 #include "RooStats/HistFactory/Measurement.h"
+
 using namespace RooStats;
 
 struct results{
@@ -68,10 +69,9 @@ void buildWS(){
    s1.AddNormFactor("MU", 1.0, -15.0, 15.0);
    chan2.AddSample(s1);     
 
-   // RooStats::HistFactory::Sample b("b", "b", "data/2bin.root");
    b.SetNormalizeByTheory(0);
    b.AddShapeFactor("B1");
-   chan2.AddSample(b);         
+   chan2.AddSample(b);    
 
    meas.AddChannel(chan2);
    
@@ -97,7 +97,6 @@ void buildWS(){
    s2.AddNormFactor("MU", 1.0, -15.0, 15.0);
    chan4.AddSample(s2);     
 
-   // RooStats::HistFactory::Sample c("c", "c", "data/2bin.root");
    c.SetNormalizeByTheory(0);
    c.AddShapeFactor("B2");
    chan4.AddSample(c);         
@@ -128,6 +127,9 @@ void main_2bin(){
 	TH1F *hB1_bli = new TH1F("B1_bli","B1_bli",15,0,15);
 	TH1F *hB2 = new TH1F("B2","B2",15,0,15);
 	TH1F *hB2_bli = new TH1F("B2_bli","B2_bli",15,0,15);
+	
+	//Print input and results in .txt file
+	// ofstream txtfile ("input_output.txt");
 
 	for(i=0;i<N;i++)
 	{
@@ -145,8 +147,8 @@ void main_2bin(){
 		TH1F *hm2 = new TH1F("m2","m2",nbins,0,1);
 		
 		mu=1;
-		// b1=0.5;
-		// b2=0.5;
+		b1=0.5;
+		b2=0.5;
 		
 		b=1;
 		c=1;
@@ -161,7 +163,7 @@ void main_2bin(){
 		// m2[i]=r.Poisson(b2+mu*s2);
 		
 		n1[i]=1;
-		m1[i]=3;
+		m1[i]=0;
 		n2[i]=2;
 		m2[i]=3;
 
@@ -181,12 +183,20 @@ void main_2bin(){
 			hB1_bli->Fill(output.B1);
 			hB2_bli->Fill(output.B2);
 		}
-			
+		
+		// Print in txtfile
+		// if(i==0) {
+		// 	txtfile << s1 << " " <<  s2 << " " << b1 << " " << b2 << " " << mu;
+		// }
+		// txtfile << "\n" << n1[i] << " " << m1[i] <<" " << n2[i] <<" " << m2[i];
+		// txtfile << " " << output.MU << " " << output.B1 << " " << output.B2 << " " << output.status;
+				
 		f.Close();
 	}
 	
 	f1.Write();
 	f1.Close();
+	txtfile.close();
 	
 	return;
 }
